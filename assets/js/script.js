@@ -35,4 +35,27 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
     });
+
+    // 섹션03 갤러리 썸네일
+    var thumbSwiper = new Swiper('.gallery_thumb', {
+        spaceBetween: 0,
+        loop: true,
+        touchRatio: 0,
+        breakpoints: {
+            768: {
+                direction: 'vertical',
+            },
+        },
+    });
+    // 섹션03 갤러리 메인
+    var mainSwiper = new Swiper('.gallery_main', {
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        loop: true,
+        thumbs: {
+            swiper: thumbSwiper,
+        },
+    });
 });
